@@ -1,0 +1,18 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:h2:mem:jpadb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 123456
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+eureka:
+  client:
+    register-with-eureka: true #注册到Eureka的注册中心
+    fetch-registry: true #获取注册实例列表
+    service-url:
+      defaultZone: http://localhost:8001/eureka/ #配置注册中心地址
